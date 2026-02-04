@@ -1,0 +1,183 @@
+1 .Difference between HTTP and HTTPS
+| Feature            | HTTP (HyperText Transfer Protocol)         | HTTPS (HyperText Transfer Protocol Secure)      |
+| ------------------ | ------------------------------------------ | ----------------------------------------------- |
+| **Full Form**      | HyperText Transfer Protocol                | HyperText Transfer Protocol Secure              |
+| **Security**       | Not secure; data is sent as plain text     | Secure; data is encrypted using SSL/TLS         |
+| **Port**           | Uses port 80                               | Uses port 443                                   |
+| **Encryption**     | No encryption                              | Uses encryption (SSL/TLS) to protect data       |
+| **Data Integrity** | No guarantee; data can be tampered         | Ensures data integrity; prevents tampering      |
+| **SEO & Trust**    | Less trusted by browsers & users           | Trusted by browsers; gives padlock icon         |
+| **Speed**          | Slightly faster (less overhead)            | Slightly slower (encryption overhead)           |
+| **Use Case**       | Non-sensitive websites (blogs, info sites) | Sensitive websites (banking, login, e-commerce) |
+
+2 .Define web architecture and DNS
+Web Architecture
+Definition:
+Web Architecture is the design and structure of how web components interact to deliver web services to users over the Internet.
+
+Key Points:
+- Defines how web clients (browsers), web servers, and databases communicate.
+- Components include:
+  1. Client (Browser) – Sends requests to the server.
+  2. Web Server – Processes client requests and sends responses (HTML, CSS, JS).
+  3. Database Server – Stores and retrieves data for dynamic content.
+  4. Protocols – HTTP/HTTPS to transfer data.
+- Can be 2-tier (Client ↔ Server) or 3-tier (Client ↔ Web Server ↔ Database) architecture.
+
+Example:
+Visiting a website like www.example.com → Browser sends request → Web server responds with the webpage → Database provides dynamic content.
+
+---
+
+DNS (Domain Name System)
+Definition:
+DNS is a system that translates human-readable domain names (like www.google.com) into IP addresses (like 142.250.190.78) that computers use to identify each other on the Internet.
+
+Key Points:
+- Acts like a phone book for the Internet.
+- Makes it easier for users to access websites without remembering numeric IP addresses.
+- Components:
+  1. Domain Names – Easy-to-remember names (e.g., google.com)
+  2. IP Addresses – Numeric addresses used by computers
+  3. DNS Server – Resolves domain names into IP addresses
+
+Example:
+You type www.example.com → DNS server translates it → Browser connects to server at its IP → Webpage loads.
+
+3 . Difference between ARIA and WAI-ARIA
+
+ARIA (Accessible Rich Internet Applications)
+ARIA refers to the accessibility attributes used in web development to make dynamic content and user interface components accessible to people using assistive technologies like screen readers. It is commonly used by developers in HTML to improve accessibility.
+
+WAI-ARIA (Web Accessibility Initiative – Accessible Rich Internet Applications)
+WAI-ARIA is the official specification developed by the World Wide Web Consortium (W3C) under the Web Accessibility Initiative (WAI). It defines the rules, roles, states, and properties of ARIA and explains how ARIA should be used correctly to ensure web accessibility.
+
+Key Differences
+ARIA	WAI-ARIA
+Refers to accessibility attributes	Refers to the official W3C standard
+Used directly in HTML code	        Provides guidelines and rules
+Practical implementation	        Specification and documentation
+Helps assistive technologies	        Maintained by W3C (WAI)
+
+4  .How Arithmetic Operators and Concatenation Work in a Browser (JavaScript)
+In a web browser, arithmetic operators and concatenation are handled by JavaScript.
+
+Arithmetic Operators
+Arithmetic operators are used to perform mathematical calculations on numbers.
+Common Arithmetic Operators
+Operator	Meaning	Example	Output
++	Addition	        10 + 5	15
+-	Subtraction	        10 - 5	5
+*	Multiplication	        10 * 5	50
+/	Division	        10 / 5	2
+%	Modulus (remainder)	10 % 3	1
+Example:
+let a = 20;
+let b = 10;
+document.write(a + b); // 30
+
+Concatenation
+Concatenation means joining strings together.
+In JavaScript, the + operator is also used for string concatenation.
+Example:
+let x = "Hello";
+let y = " World";
+document.write(x + y); // Hello World
+
+Arithmetic vs Concatenation
+The browser decides based on data type.
+
+Example:
+document.write(10 + 20);      // 30 (Arithmetic)
+document.write("10" + "20"); // 1020 (Concatenation)
+document.write("10" + 20);   // 1020 (Concatenation)
+document.write(10 + "20");   // 1020 (Concatenation)
+
+Mixed Example (Important)
+document.write(10 + 20 + "30"); // 3030
+document.write("10" + 20 + 30); // 102030
+
+Explanation:
+
+JavaScript executes left to right
+If a string appears, + becomes concatenation
+
+Key Points
+Arithmetic operators work only on numbers
++ works as addition or concatenation
+Presence of a string changes addition to concatenation
+Browser uses JavaScript type conversion
+
+5 )Define CDN
+CDN (Content Delivery Network) – 10 Marks
+
+A Content Delivery Network (CDN) is a distributed network of servers located in different geographical regions that work together to deliver web content efficiently to users. Instead of serving content from a single central server, a CDN delivers data from the server that is closest to the user, reducing latency and load time.
+
+The main purpose of a CDN is to improve website performance, speed, availability, and scalability. Static resources such as images, videos, CSS files, JavaScript files, and downloadable content are cached on multiple CDN servers called edge servers.
+
+When a user requests a webpage, the CDN automatically identifies the nearest edge server and delivers the content from that server. This reduces the distance data must travel, resulting in faster page loading. CDNs also help in reducing server load, handling high traffic, and protecting websites from DDoS attacks.
+
+Advantages of CDN
+Faster content delivery
+Reduced server load
+Improved website performance
+High availability and reliability
+Better security against cyber attacks
+Examples of CDN
+Cloudflare
+Akamai
+Amazon CloudFront
+Google Cloud CDN
+
+6)Define DNS
+DNS (Domain Name System) – 10 Marks
+
+The Domain Name System (DNS) is a hierarchical and distributed naming system used to translate human-readable domain names into machine-readable IP addresses. Computers communicate using IP addresses, but DNS allows users to access websites using easy-to-remember names like www.example.com.
+
+When a user enters a website URL in a browser, a DNS query is sent to find the corresponding IP address. The request passes through several DNS servers such as local DNS resolver, root server, Top-Level Domain (TLD) server, and authoritative DNS server. Once the IP address is found, the browser connects to the web server and loads the website.
+
+DNS improves internet usability, efficiency, and scalability. It also supports services like email routing, load balancing, and domain aliasing.
+
+Functions of DNS
+Converts domain names into IP addresses
+Enables easy website access
+Supports email services
+Improves network organization
+
+Types of DNS Servers
+Root DNS Serve
+TLD Server
+Authoritative DNS Server
+Recursive Resolver
+
+7)Behind the screen how web works.
+Behind the Screen – How the Web Works (10 Marks)
+
+When a user types a website address (URL) into a web browser and presses Enter, a series of steps take place behind the scenes to display the webpage. This process involves the browser, DNS, servers, and internet protocols.
+
+Step 1: User Enters URL
+The user enters a URL such as www.example.com in the browser. The browser first checks whether the webpage is already stored in the cache. If not found, it proceeds to the next step.
+
+Step 2: DNS Resolution
+The browser sends a request to the DNS (Domain Name System) to convert the domain name into an IP address. DNS servers locate the correct IP address of the web server hosting the website.
+
+Step 3: Browser Sends HTTP/HTTPS Request
+After getting the IP address, the browser sends an HTTP or HTTPS request to the web server. HTTPS provides secure communication using encryption.
+
+Step 4: Request Reaches Web Server
+The request travels through the internet and reaches the web server. The server processes the request and checks for the required resource (HTML page, image, etc.).
+
+Step 5: Server Processes the Request
+If the request requires dynamic content, the server may interact with backend applications and databases to generate the response.
+
+Step 6: Server Sends Response
+The web server sends an HTTP response back to the browser, which includes HTML, CSS, JavaScript, images, and status codes (200, 404, 500).
+
+Step 7: Browser Renders the Web Page
+The browser parses the HTML, applies CSS for styling, executes JavaScript for interactivity, and renders the final webpage on the screen.
+
+Step 8: Page Loads Completely
+Additional resources are loaded, scripts run, and the webpage becomes interactive for the user.
+
+
+
